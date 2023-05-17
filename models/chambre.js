@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Chambre.init({
-    id:DataTypes.UUID,
     title: DataTypes.STRING,
     description: DataTypes.STRING,
     parking: DataTypes.BOOLEAN,

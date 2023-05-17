@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Reservation.init({
-    id:DataTypes.UUID,
     chambreid: DataTypes.UUID,
     userid: DataTypes.UUID,
     dateDebut: DataTypes.DATE,
