@@ -12,10 +12,10 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 // importer les routes
 const userRoutes    = require("./routes/routesUsers")
-// const userChambres  = require("./routes/routesChambres")
+const userChambres  = require("./routes/routesChambres")
 // const userReservation= require("./routes/routesReservations")
 app.use("/user", userRoutes)
-//app.use("/chambre", userChambres)
+app.use("/chambre", userChambres)
 //app.use("/reservation", userReservation)
 
 // launch app
