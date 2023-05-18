@@ -33,9 +33,9 @@
 
 ## INSTALLATION ET LANCEMENT DE L'APPLICATION
 
-Vous devez créer une base de donnée nommé : `hotelparis`
-Ensuite migrez les models avec la commande : `sequelize db:migrate`
-Importer les package npm (node_modules) : `npm install`.
-Lancer l'application : `node index.js`
+Vous devez créer une base de donnée nommé : `hotelparis` <br>
+Ensuite migrez les models avec la commande : `sequelize db:migrate` <br>
+Importer les package npm (node_modules) : `npm install`. <br>
+Lancer l'application : `node index.js` <br>
 
 ## @LAMINE 😉
