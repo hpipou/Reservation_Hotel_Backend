@@ -10,6 +10,10 @@ const bodyParser    = require("body-parser")
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
+// protéger les entête de réponse
+const helmet = require("helmet")
+app.use(helmet())
+
 // importer les routes
 const userRoutes    = require("./routes/routesUsers")
 const userChambres  = require("./routes/routesChambres")
