@@ -10,6 +10,18 @@ const bodyParser    = require("body-parser")
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
+// Limitation de requettes et protection contre les attaques DDOS
+const rateLimit = require('express-rate-limit')
+const limiter = rateLimit({
+	windowMs: 10 * 60 * 3000, // 15 minutes
+	max: 100, // Limiter chaque adresse ip à 100 requette pour 15min
+	standardHeaders: true, 
+	legacyHeaders: false, 
+})
+
+// appliquer la limitation à toutes les routes
+app.use(limiter)
+
 // protéger les entête de réponse
 const helmet = require("helmet")
 app.use(helmet())
