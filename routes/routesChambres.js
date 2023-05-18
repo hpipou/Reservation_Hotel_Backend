@@ -39,7 +39,7 @@ route.post("/add", inputVerification, (req,res)=>{
         terrasse:req.body.terrasse,
         bar:req.body.bar,
         petitDej:req.body.petitDej,
-        images:['standard.jpg'],
+        images:[],
         userid: tokenDecoded.id
     })
     .then(()=>{return res.status(201).json({"OK":"CHAMBRE AJOUTÉ"})})

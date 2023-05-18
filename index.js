@@ -14,9 +14,11 @@ app.use(bodyParser.urlencoded({extended:true}))
 const userRoutes    = require("./routes/routesUsers")
 const userChambres  = require("./routes/routesChambres")
 const userReservation= require("./routes/routesReservations")
+const userImage     = require("./routes/routesImages")
 app.use("/user", userRoutes)
 app.use("/chambre", userChambres)
 app.use("/reservation", userReservation)
+app.use("/images", userImage)
 
 // launch app
 app.listen(3000, ()=>console.log("SERVER START"))
